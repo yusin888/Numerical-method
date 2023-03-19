@@ -1,0 +1,108 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\title[Your Short Title]{Numerical Methods}
+\author{Yusin Ali Adan}
+\institute{JKUAT}
+%\date{Date of Presentation}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+
+\begin{frame}{Newton Raphson Method}
+
+
+The Newton-Raphson method (also known as Newton's method) is a way to quickly find a good approximation for the root of a real-valued function $f(x)=0$. It uses the idea that a continuous and differentiable function can be approximated by a straight line tangent to it.
+
+The solution to roots of the function is given below:
+\begin{equation}
+x = x_0 - \frac{f'(x_0)}{f''(x_0)}.
+\end{equation}
+NOTE:  $x_0$ is initial chosen value.\newline
+
+This process may be repeated as many times as necessary to get the desired accuracy. In general, for any $x$-value $x_n$, the next value is given by\newline
+\begin{equation}
+x_{n+1} = x_n - \frac{f'(x_n)}{f''(x_n)}.
+\end{equation}
+\end{frame}
+\begin{frame}{Newton Raphson Method}
+
+The necessary condition for a function $f(x)$ is that it should be continuous and differentiable function\\newline
+
+Recap on How it works:\\
+Newton-Raphson chooses an initial $x_0$, and iterates the update above until convergence.
+
+\end{frame}
+\begin{frame}{Bisection Method}
+The bisection method is used to find the roots of a polynomial equation. It separates the interval and subdivides the interval in which the root of the equation lies. The principle behind this method is the intermediate theorem for continuous functions. It works by narrowing the gap between the positive and negative intervals until it closes in on the correct answer. This method narrows the gap by taking the average of the positive and negative intervals. It is a simple method and it is relatively slow.\\ 
+
+\textbf{Concept:}\\
+Let us consider a continuous function $f(x)$ which is defined on the closed interval [a, b], is given with $f(a)$ and $f(b)$ of different signs. Then by intermediate theorem, there exists a point such that    $x$\in(a, b) for which $f(x) = 0$.\\
+\end{frame}
+
+\begin{frame}
+\textbf{Example}\\
+Find the roots of $x^2+2x-1 $  between [0,2].\\
+\[f(0)= 0^2+2(0)-1
+     =-1
+\]
+
+\[ f(2) =2^2 +2(2)−1
+=7.
+\]
+
+\end{frame}
+
+\begin{frame}
+The function is continuous since there is a sign change.
+
+Let “t” be the midpoint of the interval.
+\[
+ t = \frac{(a+b)}{2} 
+\]
+\[
+I.e., t = \frac{(0+2)}{2} 
+\]
+\[
+t=1
+\]
+If $f(t)*f(a) <0 $, assume  b=t else
+$ a=t$.\\
+
+This is repeated for a number of iterations with each iteration having boundaries of opposite sides.
+
+
+\end{frame}
+
+
+
+\end{document}
+
